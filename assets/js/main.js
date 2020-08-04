@@ -158,7 +158,6 @@ let mainState = {
         this.addOnePipe(Constants.PIPE_SPAWN_X, topPipeY - Constants.PIPE_LENGTH);
         this.addOnePipe(Constants.PIPE_SPAWN_X, bottomPipeY, false);
     }
-
 };
 
 let game = new Phaser.Game(Constants.FIELD_X, Constants.FIELD_Y);
