@@ -45,7 +45,6 @@ let mainState = {
         // Эвентлистенер на пробел
         spaceKey.onDown.add(this.jump, this);
 
-
         // Пустая группа труб, с таймером, котрый их спавнит
         this.pipes = game.add.group();
         this.timer = game.time.events.loop(Constants.PIPE_TIMER, this.addPipePair, this);
