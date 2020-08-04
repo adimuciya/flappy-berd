@@ -1,9 +1,9 @@
 class Constants {
-
+    // Класс с константами, чтобы избежать магических цифр
+    // Статический, чтобы не создавать объект
 
     static _FIELD_X = 600;
     static _FIELD_Y = 800;
-    static _STAGE_BACKGROUND = '#71c5cf';
     static _BIRD_POS_X = 100;
     static _BIRD_POS_Y = 345;
     static _BIRD_GRAVITY_Y = 1000;
@@ -32,10 +32,6 @@ class Constants {
 
     static get FIELD_Y() {
         return this._FIELD_Y;
-    }
-
-    static get STAGE_BACKGROUND() {
-        return this._STAGE_BACKGROUND;
     }
 
     static get BIRD_GRAVITY_Y() {
