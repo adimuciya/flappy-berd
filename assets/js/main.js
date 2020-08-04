@@ -17,11 +17,13 @@ let mainState = {
     },
 
     create: function () {
-        // инициализация звуков и картинок
+        // инициализация картинок
         game.add.image(0, 0, 'backGround');
         for (let i = 0; i < Constants.FIELD_X/Constants.GROUND_PIECE_LENGTH; i++){
             game.add.image(i * Constants.GROUND_PIECE_LENGTH, Constants.FIELD_Y - Constants.GROUND_PIECE_LENGTH, 'groundPiece');
         }
+
+        // инициализация звуков
         this.jumpSound = game.add.audio('jump');
         this.scoreSound = game.add.audio('score');
         this.dieSound = game.add.audio('die');
@@ -54,7 +56,7 @@ let mainState = {
         this.labelScore = game.add.text(20, 20, 'Score: ' + this.score,
             { font: "30px Arial", fill: "#ffffff" });
         this.recordScoreLabel = game.add.text(440, 20, 'Record: ' + this.recordScore,
-            { font: "30px Arial", fill: "#ffff00" });
+            { font: "30px Arial", fill: "#fd8e4d" });
 
         this.bird.anchor.setTo(Constants.BIRD_ANCHOR_X, Constants.BIRD_ANCHOR_Y);
     },
@@ -78,7 +80,7 @@ let mainState = {
         }
 
         // Птица всегда падает мордой вниз
-        if (this.bird.angle < Constants.BIRD_ANGLE) this.bird.angle += 1;
+        if (this.bird.angle < Constants.BIRD_ANGLE) this.bird.angle += Constants.BIRD_ANGLE_ROTATION_DOWN_SPEED;
 
         // Возможность вмазаться в трубу
         game.physics.arcade.overlap(this.bird, this.pipes, this.hitPipe, null, this);
@@ -106,7 +108,7 @@ let mainState = {
         // Добавляем курице анимацию поворота при прыжке
         // на заданный угол и скорость поворота
         let animation = game.add.tween(this.bird);
-        animation.to({angle: -Constants.BIRD_ANGLE}, Constants.BIRD_ANGLE_ROTATION_SPEED);
+        animation.to({angle: -Constants.BIRD_ANGLE}, Constants.BIRD_ANGLE_ROTATION_UP_SPEED);
         animation.start();
 
         this.jumpSound.play();

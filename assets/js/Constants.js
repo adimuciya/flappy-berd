@@ -6,8 +6,8 @@ class Constants {
     static _FIELD_Y = 800;
     static _BIRD_POS_X = 100;
     static _BIRD_POS_Y = 345;
-    static _BIRD_GRAVITY_Y = 1000;
-    static _BIRD_JUMP_VELOCITY_Y = -350;
+    static _BIRD_GRAVITY_Y = 1500;
+    static _BIRD_JUMP_VELOCITY_Y = -450;
     static _PIPE_VELOCITY_X = -200;
     static _PIPE_GAP = 200;
     static _PIPE_TOP_MIN = 40; // -760
@@ -18,8 +18,9 @@ class Constants {
     static _GROUND_PIECE_LENGTH = 30;
     static _BIRD_ANCHOR_X = -0.2;
     static _BIRD_ANCHOR_Y = 0.5;
-    static _BIRD_ANGLE = 20;
-    static _BIRD_ANGLE_ROTATION_SPEED = 100;
+    static _BIRD_ANGLE = 50;
+    static _BIRD_ANGLE_ROTATION_UP_SPEED = 100;
+    static _BIRD_ANGLE_ROTATION_DOWN_SPEED = 3;
 
 
     static get PIPE_VELOCITY_X() {
@@ -90,7 +91,11 @@ class Constants {
         return this._BIRD_ANGLE;
     }
 
-    static get BIRD_ANGLE_ROTATION_SPEED() {
-        return this._BIRD_ANGLE_ROTATION_SPEED;
+    static get BIRD_ANGLE_ROTATION_UP_SPEED() {
+        return this._BIRD_ANGLE_ROTATION_UP_SPEED;
+    }
+
+    static get BIRD_ANGLE_ROTATION_DOWN_SPEED() {
+        return this._BIRD_ANGLE_ROTATION_DOWN_SPEED;
     }
 }
