@@ -1,20 +1,25 @@
 class Constants {
 
 
-    static _FIELD_X = 400;
-    static _FIELD_Y = 500;
+    static _FIELD_X = 600;
+    static _FIELD_Y = 800;
     static _STAGE_BACKGROUND = '#71c5cf';
     static _BIRD_POS_X = 100;
-    static _BIRD_POS_Y = 245;
+    static _BIRD_POS_Y = 345;
     static _BIRD_GRAVITY_Y = 1000;
     static _BIRD_JUMP_VELOCITY_Y = -350;
     static _PIPE_VELOCITY_X = -200;
-    static _PIPE_GAP = 150;
+    static _PIPE_GAP = 200;
     static _PIPE_TOP_MIN = 40; // -760
-    static _PIPE_TOP_MAX = 300; // -500
+    static _PIPE_TOP_MAX = 550; // -500
     static _PIPE_LENGTH = 800;
-    static _PIPE_SPAWN_X = 400;
-    static _PIPE_TIMER = 1500;
+    static _PIPE_SPAWN_X = 600;
+    static _PIPE_TIMER = 2000;
+    static _GROUND_PIECE_LENGTH = 30;
+    static _BIRD_ANCHOR_X = -0.2;
+    static _BIRD_ANCHOR_Y = 0.5;
+    static _BIRD_ANGLE = 20;
+    static _BIRD_ANGLE_ROTATION_SPEED = 100;
 
 
     static get PIPE_VELOCITY_X() {
@@ -71,5 +76,25 @@ class Constants {
 
     static get PIPE_TIMER() {
         return this._PIPE_TIMER;
+    }
+
+    static get GROUND_PIECE_LENGTH() {
+        return this._GROUND_PIECE_LENGTH;
+    }
+
+    static get BIRD_ANCHOR_X() {
+        return this._BIRD_ANCHOR_X;
+    }
+
+    static get BIRD_ANCHOR_Y() {
+        return this._BIRD_ANCHOR_Y;
+    }
+
+    static get BIRD_ANGLE() {
+        return this._BIRD_ANGLE;
+    }
+
+    static get BIRD_ANGLE_ROTATION_SPEED() {
+        return this._BIRD_ANGLE_ROTATION_SPEED;
     }
 }
